@@ -1,1 +1,23 @@
-<p>hero-section works!</p>
+<section class="hero-section flex items-end justify-center mx-auto relative">
+    <img src="https://png.pngtree.com/png-clipart/20230429/original/pngtree-evil-robot-png-image_9120495.png" alt="3D Modal Image" class="max-w-lg" />
+    <div class="w-1/3 pb-8 space-y-8">
+        <div>
+            <span class="uppercase mb-2">
+                Software engineer
+            </span>
+            <div>
+                <h1 class="mat-display-1 !mb-4">Hello, I'm Zeshan Shakil</h1>
+                <p class="mat-subheading-2">Short text with details about you, what you do, or your professional career. You can add more information on the about page.</p>
+            </div>
+            <div class="mt-8 space-x-2">
+                <button mat-stroked-button (click)="openOfferModal()">Create offer</button>
+                <button mat-flat-button color="primary" routerLink="/contact">Get in touch</button>
+            </div>
+        </div>
+        <mat-toolbar color="secondary" class="space-x-2" mat-raised-button>
+            <span class="spacer"></span>
+            <button mat-stroked-button>Google meet</button>
+            <button mat-flat-button color="primary">Schedule a meeting</button>
+        </mat-toolbar>
+    </div>
+</section>
