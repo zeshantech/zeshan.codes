@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { OfferModalComponent } from '../../shared/offer-modal/offer-modal.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-hero-section',
@@ -8,16 +8,16 @@ import { OfferModalComponent } from '../../shared/offer-modal/offer-modal.compon
   styleUrl: './hero-section.component.css',
 })
 export class HeroSectionComponent {
-  constructor(private dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {}
 
   openOfferModal(): void {
     const dialogRef = this.dialog.open(OfferModalComponent, {
-      width: '400px', // Adjust width as needed
+      width: '600px',
+      maxHeight: '80vh',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      if (result === 'toggle') {
-      }
+      console.log('The dialog was closed');
     });
   }
 }

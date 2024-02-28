@@ -3,22 +3,18 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialMediaIconsComponent } from '../shared/social-media-icons/social-media-icons.component';
-import { HeroSectionComponent } from './hero-section/hero-section.component';
-import { OfferModalComponent } from '../shared/offer-modal/offer-modal.component';
 import { RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatDialogModule } from '@angular/material/dialog';
+import { FooterComponent } from './footer/footer.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     HeaderComponent,
     SocialMediaIconsComponent,
-    HeroSectionComponent,
-    OfferModalComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -26,8 +22,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatGridListModule,
-    MatDialogModule,
   ],
 })
 export class LayoutModule {}

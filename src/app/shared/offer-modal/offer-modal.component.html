@@ -1,8 +1,101 @@
 <h2 mat-dialog-title>Create Offer</h2>
-<mat-dialog-content>
-    <!-- Your offer creation form or content goes here -->
+<mat-dialog-content class="p-8">
+
+    <h3 class="mat-h3 !m-1">Your contact info</h3>
+    <div class="flex flex-col gap-2">
+        <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" [(ngModel)]="contactOption" class="w-fit">
+            <mat-button-toggle value="email">Email</mat-button-toggle>
+            <mat-button-toggle value="phoneNumber">Number</mat-button-toggle>
+        </mat-button-toggle-group>
+
+        <mat-form-field appearance="outline" *ngIf="contactOption === 'email'">
+            <mat-label>Email</mat-label>
+            <input matInput [type]="'email'">
+        </mat-form-field>
+        <mat-form-field appearance="outline" *ngIf="contactOption === 'phoneNumber'">
+            <mat-label>Phone number</mat-label>
+            <input matInput [type]="'tel'">
+        </mat-form-field>
+    </div>
+
+
+    <!-- Section: Project Details -->
+    <div class="flex flex-col">
+        <h3 class="mat-h3 !m-1">Project Details (optional)</h3>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Purpose/Goal</mat-label>
+            <textarea matInput rows="3" placeholder="Describe the main purpose or goal of the application"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Target Audience</mat-label>
+            <textarea matInput rows="3" placeholder="Identify the intended users or target audience"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Features</mat-label>
+            <textarea matInput rows="3" placeholder="List the key features and functionalities"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Platform</mat-label>
+            <mat-select>
+                <mat-option value="web">Web</mat-option>
+                <mat-option value="desktop">Desktop</mat-option>
+                <mat-option value="both">App</mat-option>
+                <mat-option value="both">All</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Section: Technical Details -->
+    <div class="flex flex-col">
+        <h3 class="mat-h3 !m-1">Technical Details (optional)</h3>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Technology Preferences</mat-label>
+            <textarea matInput rows="3" placeholder="Specify any specific technologies or frameworks"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Design Preferences</mat-label>
+            <textarea matInput rows="3" placeholder="Describe design preferences"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Integration Requirements</mat-label>
+            <textarea matInput rows="3" placeholder="Identify any third-party services or systems"></textarea>
+        </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Section: Project Management -->
+    <div class="flex flex-col">
+        <h3 class="mat-h3 !m-1">Project Management (optional)</h3>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Timeline</mat-label>
+            <input matInput [type]="'text'" placeholder="Expected timeline for the project">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Budget</mat-label>
+            <input matInput [type]="'text'" placeholder="Client's budget for the project">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Additional Comments</mat-label>
+            <textarea matInput rows="3" placeholder="Any additional comments or requirements"></textarea>
+        </mat-form-field>
+    </div>
 </mat-dialog-content>
+
+
 <mat-dialog-actions align="end">
-    <button mat-button (click)="close()">Toggle</button>
-    <!-- Additional action buttons if needed -->
+    <button mat-stroked-button mat-dialog-close>Cancel</button>
+    <button mat-flat-button color="primary" [mat-dialog-close]="true">Send</button>
 </mat-dialog-actions>
