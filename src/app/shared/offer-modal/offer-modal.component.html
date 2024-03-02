@@ -1,5 +1,5 @@
 <h2 mat-dialog-title>Create Offer</h2>
-<mat-dialog-content class="p-8">
+<mat-dialog-content class="p-8" [formGroup]="offerFormGroup">
 
     <h3 class="mat-h3 !m-1">Your contact info</h3>
     <div class="flex flex-col gap-2">
@@ -10,14 +10,13 @@
 
         <mat-form-field appearance="outline" *ngIf="contactOption === 'email'">
             <mat-label>Email</mat-label>
-            <input matInput [type]="'email'">
+            <input matInput [type]="'email'" formControlName="email">
         </mat-form-field>
         <mat-form-field appearance="outline" *ngIf="contactOption === 'phoneNumber'">
             <mat-label>Phone number</mat-label>
-            <input matInput [type]="'tel'">
+            <input matInput [type]="'tel'" formControlName="phoneNumber">
         </mat-form-field>
     </div>
-
 
     <!-- Section: Project Details -->
     <div class="flex flex-col">
@@ -25,26 +24,26 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Purpose/Goal</mat-label>
-            <textarea matInput rows="3" placeholder="Describe the main purpose or goal of the application"></textarea>
+            <textarea formControlName="purpose" matInput  rows="3" placeholder="Describe the main purpose or goal of the application"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Target Audience</mat-label>
-            <textarea matInput rows="3" placeholder="Identify the intended users or target audience"></textarea>
+            <textarea formControlName="targetAudience" matInput rows="3"  placeholder="Identify the intended users or target audience"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Features</mat-label>
-            <textarea matInput rows="3" placeholder="List the key features and functionalities"></textarea>
+            <textarea formControlName="features" matInput rows="3" placeholder="List the key features and functionalities"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Platform</mat-label>
-            <mat-select>
+            <mat-select formControlName="platform">
                 <mat-option value="web">Web</mat-option>
                 <mat-option value="desktop">Desktop</mat-option>
-                <mat-option value="both">App</mat-option>
-                <mat-option value="both">All</mat-option>
+                <mat-option value="app">App</mat-option>
+                <mat-option value="all">All</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
@@ -57,17 +56,17 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Technology Preferences</mat-label>
-            <textarea matInput rows="3" placeholder="Specify any specific technologies or frameworks"></textarea>
+            <textarea formControlName="technologyPreferences" matInput rows="3" placeholder="Specify any specific technologies or frameworks"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Design Preferences</mat-label>
-            <textarea matInput rows="3" placeholder="Describe design preferences"></textarea>
+            <textarea formControlName="designPreferences" matInput rows="3" placeholder="Describe design preferences"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Integration Requirements</mat-label>
-            <textarea matInput rows="3" placeholder="Identify any third-party services or systems"></textarea>
+            <textarea formControlName="integrationRequirements" matInput rows="3" placeholder="Identify any third-party services or systems"></textarea>
         </mat-form-field>
     </div>
 
@@ -79,17 +78,17 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Timeline</mat-label>
-            <input matInput [type]="'text'" placeholder="Expected timeline for the project">
+            <input formControlName="timeline" matInput [type]="'text'" placeholder="Expected timeline for the project">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Budget</mat-label>
-            <input matInput [type]="'text'" placeholder="Client's budget for the project">
+            <input formControlName="budget" matInput [type]="'text'" placeholder="Client's budget for the project">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Additional Comments</mat-label>
-            <textarea matInput rows="3" placeholder="Any additional comments or requirements"></textarea>
+            <textarea formControlName="additionalComments" matInput rows="3" placeholder="Any additional comments or requirements"></textarea>
         </mat-form-field>
     </div>
 </mat-dialog-content>
@@ -97,5 +96,5 @@
 
 <mat-dialog-actions align="end">
     <button mat-stroked-button mat-dialog-close>Cancel</button>
-    <button mat-flat-button color="primary" [mat-dialog-close]="true">Send</button>
+    <button mat-flat-button color="primary" (click)="createOffer()">Send</button>
 </mat-dialog-actions>

@@ -1,0 +1,22 @@
+<form action="" (ngSubmit)="submitContactForm($event)" class="mat-elevation-z1 p-2 flex flex-col items-center" [formGroup]="contactFormGroup">
+    <h3 class="mat-headline-5">Contact me</h3>
+    <h4 class="mat-body-2">Contact via whatsapp for fastest responde</h4>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Full name</mat-label>
+        <input matInput [type]="'text'" formControlName="userName">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput [type]="'email'" formControlName="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Phone number (optional)</mat-label>
+        <input matInput [type]="'tel'" formControlName="phoneNumber">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Message (optional)</mat-label>
+        <textarea formControlName="message" matInput rows="3" placeholder="Add some message"></textarea>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" class="w-full" type="submit" [disabled]="contactFormGroup.invalid">Send</button>
+</form>

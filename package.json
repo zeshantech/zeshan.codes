@@ -20,10 +20,14 @@
     "@angular/platform-browser": "^17.2.0",
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
+    "@supabase/supabase-js": "^2.39.7",
     "autoprefixer": "^10.4.17",
+    "jspdf": "^2.5.1",
     "postcss": "^8.4.35",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "twilio": "^4.23.0",
+    "uuid": "^9.0.1",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
@@ -31,6 +35,7 @@
     "@angular/cli": "^17.2.1",
     "@angular/compiler-cli": "^17.2.0",
     "@types/jasmine": "~5.1.0",
+    "@types/uuid": "^9.0.8",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
