@@ -1,0 +1,12 @@
+<mat-card class="p-2 text-center justify-between max-w-96 h-full">
+    <div class="space-y-4 flex flex-col items-center">
+        <img [src]="imageUrl" alt="" class="h-32 w-32 rounded-full">
+        <mat-card-title>{{ title }}</mat-card-title>
+        <mat-card-subtitle>{{ description }}</mat-card-subtitle>
+        <mat-card-content>
+            <p class="font-semibold !m-0">Technologies</p>
+            <mat-card-subtitle>{{ technologies.join(', ') }}</mat-card-subtitle>
+        </mat-card-content>
+    </div>
+    <button mat-stroked-button color="primary" class="w-full" (click)="handleContinue()">Continue</button>
+</mat-card>

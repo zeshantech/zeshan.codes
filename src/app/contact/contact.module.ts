@@ -13,9 +13,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MapComponent } from './map/map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
-  declarations: [ContactComponent, OptionCardComponent, ContactFormComponent],
+  declarations: [
+    ContactComponent,
+    OptionCardComponent,
+    ContactFormComponent,
+    MapComponent,
+  ],
   imports: [
     CommonModule,
     LayoutModule,
@@ -30,6 +37,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     CommonModule,
     MatDividerModule,
+    GoogleMapsModule,
     ReactiveFormsModule,
   ],
 })

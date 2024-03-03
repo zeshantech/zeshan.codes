@@ -65,7 +65,6 @@ export class OfferModalComponent {
     const formData = this.offerFormGroup.value;
     const doc = this.offerModalService.generatePdf(formData);
     const url = await this.offerModalService.uploadPdfToCloud(doc);
-    console.log(url);
 
     if (url) {
       await this.offerModalService.sendPDFViaWhatsApp(url);

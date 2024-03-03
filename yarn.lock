@@ -202,6 +202,14 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/google-maps@17.2.1":
+  version "17.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/google-maps/-/google-maps-17.2.1.tgz#ee8575661e3afc2d02772983401435c3f1f7ecb3"
+  integrity sha512-u6DpuwyKoOP5olyrySMTIix36KnxmAgfFHrokyk3lnczyJNVt28HpHi65scpE67sMdYZKhRV5ogSiM6W3Ab68A==
+  dependencies:
+    "@types/google.maps" "^3.54.10"
+    tslib "^2.3.0"
+
 "@angular/material@^17.2.1":
   version "17.2.1"
   resolved "https://registry.yarnpkg.com/@angular/material/-/material-17.2.1.tgz#5698c4e1b52d27f6f4f325c79431c9fa43c763dd"
@@ -2637,6 +2645,11 @@
     "@types/express-serve-static-core" "^4.17.33"
     "@types/qs" "*"
     "@types/serve-static" "*"
+
+"@types/google.maps@^3.54.10":
+  version "3.55.4"
+  resolved "https://registry.yarnpkg.com/@types/google.maps/-/google.maps-3.55.4.tgz#66860b5ed623edabcc42f8f7a743584fe60225be"
+  integrity sha512-Ip3IfRs3RZjeC88V8FGnWQTQXeS5gkJedPSosN6DMi9Xs8buGTpsPq6UhREoZsGH+62VoQ6jiRBUR8R77If69w==
 
 "@types/http-errors@*":
   version "2.0.4"
