@@ -20,4 +20,8 @@ export class HeroSectionComponent {
       console.log('The dialog was closed');
     });
   }
+
+  scheduleMeeting() {
+    alert("I'm working on it")
+  }
 }
