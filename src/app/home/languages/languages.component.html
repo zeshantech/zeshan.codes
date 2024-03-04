@@ -1,13 +1,11 @@
-<div class="container m-auto text-center mt-12">
-    <p mat-h1 class="underline text-3xl font-medium">Languages</p>
+<div class="container m-auto text-center my-12">
+    <p mat-h1 class="underline text-3xl font-medium">Programming languages</p>
 
-    <mat-card class="flex flex-wrap justify-center gap-12">
-        <mat-card-content>
-            <app-language-item [title]="'JavsScript'" [initialValue]="93"></app-language-item>
-            <app-language-item [title]="'TypeScript'" [initialValue]="85"></app-language-item>
-            <app-language-item [title]="'Python'" [initialValue]="65"></app-language-item>
-            <app-language-item [title]="'PHP'" [initialValue]="60"></app-language-item>
-            <app-language-item [title]="'Java'" [initialValue]="30"></app-language-item>
-        </mat-card-content>
-    </mat-card>
+        <div class="flex flex-wrap justify-center gap-12">
+            <app-language-item [imageUrl]="'https://res.cloudinary.com/djvfnekle/image/upload/v1709526929/plzo49lmscyzajucumhj.jpg'" [title]="'JavsScript'" [initialValue]="99"></app-language-item>
+            <app-language-item [imageUrl]="'https://res.cloudinary.com/djvfnekle/image/upload/v1709526923/gzrauzppfxg9rnyisw1r.jpg'" [title]="'Python'" [initialValue]="65"></app-language-item>
+            <app-language-item [imageUrl]="'https://res.cloudinary.com/djvfnekle/image/upload/v1709526941/tov2qak324s8iypugwud.jpg'" [title]="'PHP'" [initialValue]="60"></app-language-item>
+            <app-language-item [imageUrl]="'https://res.cloudinary.com/djvfnekle/image/upload/v1709526951/mo0ejlz37gczuirmaovr.jpg'" [title]="'C++'" [initialValue]="40"></app-language-item>
+            <app-language-item [imageUrl]="'https://res.cloudinary.com/djvfnekle/image/upload/v1709526936/nrusy0bul25qpx9zvcqw.jpg'" [title]="'Java'" [initialValue]="30"></app-language-item>
+        </div>
 </div>

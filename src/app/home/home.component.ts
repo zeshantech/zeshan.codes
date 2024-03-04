@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   template: `<app-hero-section></app-hero-section> <app-skills></app-skills> 
   <app-languages></app-languages>
-  
   `,
 })
 export class HomeComponent {}

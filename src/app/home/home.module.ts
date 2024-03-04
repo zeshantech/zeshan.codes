@@ -25,7 +25,7 @@ import { SkillItemComponent } from './skills/skill-item/skill-item.component';
     MatCardModule,
     MatSliderModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
 })
 export class HomeModule {}

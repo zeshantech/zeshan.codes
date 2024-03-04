@@ -1,18 +1,26 @@
 <div class="mat-elevation-z1 p-1 flex gap-1 m-auto justify-center">
-    <div class="w-32 gap-2 justify-center pt-4 flex flex-col items-center cursor-pointer click" matRipple (click)="byWhatsapp()">
-        <mat-icon class="icon">whatsapp</mat-icon>
+    <a class="w-32 gap-2 justify-center pt-4 flex flex-col items-center cursor-pointer click" matRipple href="https://api.whatsapp.com/send?phone=923064547910" target="_blank">
+        <app-social-media-icons [iconName]="'whatsapp'" class="icon"></app-social-media-icons>
         <h3 class="mat-h3 select-none !m-1 text-center">Whatsapp</h3>
-    </div>
+    </a>
     <div class="w-32 gap-2 justify-center pt-4 flex flex-col items-center cursor-pointer click" matRipple (click)="byCall()">
         <mat-icon class="icon">phone</mat-icon>
         <h3 class="mat-h3 select-none !m-1 text-center">Phone call</h3>
     </div>
     <div class="w-32 gap-2 justify-center pt-4 flex flex-col items-center cursor-pointer click" matRipple (click)="byMSTeams()">
-        <mat-icon class="icon">ms_teams</mat-icon>
+        <app-social-media-icons [iconName]="'msTeams'" class="icon"></app-social-media-icons>
         <h3 class="mat-h3 select-none !m-1 text-center">MS teams</h3>
     </div>
     <div class="w-32 gap-2 justify-center pt-4 flex flex-col items-center cursor-pointer click" matRipple (click)="bySkype()">
-        <mat-icon class="icon">skype</mat-icon>
+        <app-social-media-icons [iconName]="'skype'" class="icon"></app-social-media-icons>
         <h3 class="mat-h3 select-none !m-1 text-center">Skype</h3>
     </div>
+    <a class="w-32 gap-2 justify-center pt-4 flex flex-col items-center cursor-pointer click" matRipple href="https://www.facebook.com/faisal.bashir.948/" target="_blank">
+        <mat-icon class="icon">facebook</mat-icon>
+        <h3 class="mat-h3 select-none !m-1 text-center">Facebook</h3>
+    </a>
+    <a class="w-32 gap-2 justify-center pt-4 flex flex-col items-center cursor-pointer click" matRipple href="https://www.instagram.com/faisal.bashir.948/" target="_blank">
+        <app-social-media-icons [iconName]="'instagram'" class="icon"></app-social-media-icons>
+        <h3 class="mat-h3 select-none !m-1 text-center">Instagram</h3>
+    </a>
 </div>

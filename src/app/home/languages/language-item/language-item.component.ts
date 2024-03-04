@@ -8,6 +8,7 @@ import { ThemePalette } from '@angular/material/core';
 })
 export class LanguageItemComponent {
   @Input() title!: string;
+  @Input() imageUrl!: string;
   @Input() initialValue!: number;
 
   onSliderChange(event: any) {

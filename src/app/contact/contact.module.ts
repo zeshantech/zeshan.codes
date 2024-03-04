@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { SocialMediaIconsComponent } from '../shared/social-media-icons/social-media-icons.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatDividerModule,
     GoogleMapsModule,
     ReactiveFormsModule,
+    SocialMediaIconsComponent
   ],
 })
 export class ContactModule {}
