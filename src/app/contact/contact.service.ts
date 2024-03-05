@@ -11,7 +11,7 @@ export class ContactService {
 
   async sendEmail(data: Record<string, string>) {
     return this.http
-      .post(`${environment.nodeServerUrl}/email/contact-form`, data)
+      .post(`${environment.nodeServerUrl}/email`, data)
       .subscribe();
   }
 }

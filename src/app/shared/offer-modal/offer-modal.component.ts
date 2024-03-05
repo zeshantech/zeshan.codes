@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {
   FormBuilder,
+  FormControl,
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
@@ -19,7 +20,7 @@ import { OfferModalService } from './offer-modal.service';
 @Component({
   selector: 'app-offer-modal',
   templateUrl: './offer-modal.component.html',
-  styleUrl: './offer-modal.component.css',
+  styleUrls: ['./offer-modal.component.css'],
   standalone: true,
   imports: [
     FormsModule,
@@ -36,7 +37,6 @@ import { OfferModalService } from './offer-modal.service';
   ],
 })
 export class OfferModalComponent {
-  contactOption: string = 'email';
   offerFormGroup: FormGroup;
 
   constructor(

@@ -28,7 +28,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // POST endpoint to send email
-app.post('/email/contact-form', (req, res) => {
+app.post('/email', (req, res) => {
   let tableRows = '';
   for (const field in req.body) {
     tableRows += `
@@ -40,8 +40,8 @@ app.post('/email/contact-form', (req, res) => {
   }
 
   const mailOptions: Mail.Options = {
-    from: process.env.EMAIL_USER,
-    to: 'zgaya.hub@gmail.com',
+    from: req.body.email,
+    to: 'zeshanshakil0@gmail.com',
     subject: 'Contact form submission',
     html: `
       <h2>Contact Form Submission</h2>

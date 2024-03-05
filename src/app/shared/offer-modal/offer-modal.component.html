@@ -3,16 +3,16 @@
 
     <h3 class="mat-h3 !m-1">Your contact info</h3>
     <div class="flex flex-col gap-2">
-        <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" [(ngModel)]="contactOption" class="w-fit">
+        <mat-button-toggle-group formControlName="contactOption" class="w-fit">
             <mat-button-toggle value="email">Email</mat-button-toggle>
             <mat-button-toggle value="phoneNumber">Number</mat-button-toggle>
         </mat-button-toggle-group>
 
-        <mat-form-field appearance="outline" *ngIf="contactOption === 'email'">
+        <mat-form-field appearance="outline" *ngIf="offerFormGroup.get('contactOption')!.value === 'email'">
             <mat-label>Email</mat-label>
             <input matInput [type]="'email'" formControlName="email">
         </mat-form-field>
-        <mat-form-field appearance="outline" *ngIf="contactOption === 'phoneNumber'">
+        <mat-form-field appearance="outline" *ngIf="offerFormGroup.get('contactOption')!.value === 'phoneNumber'">
             <mat-label>Phone number</mat-label>
             <input matInput [type]="'tel'" formControlName="phoneNumber">
         </mat-form-field>
@@ -24,12 +24,12 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Purpose/Goal</mat-label>
-            <textarea formControlName="purpose" matInput  rows="3" placeholder="Describe the main purpose or goal of the application"></textarea>
+            <textarea formControlName="purpose" matInput rows="3" placeholder="Describe the main purpose or goal of the application"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Target Audience</mat-label>
-            <textarea formControlName="targetAudience" matInput rows="3"  placeholder="Identify the intended users or target audience"></textarea>
+            <textarea formControlName="targetAudience" matInput rows="3" placeholder="Identify the intended users or target audience"></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
