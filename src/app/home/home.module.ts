@@ -13,9 +13,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LanguagesComponent } from './languages/languages.component';
 import { LanguageItemComponent } from './languages/language-item/language-item.component';
 import { SkillItemComponent } from './skills/skill-item/skill-item.component';
+import { ServicesComponent } from './services/services.component';
+import { ServiceCardComponent } from './services/service-card/service-card.component';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
-  declarations: [HomeComponent, HeroSectionComponent, SkillsComponent, LanguagesComponent, LanguageItemComponent, SkillItemComponent],
+  declarations: [HomeComponent, HeroSectionComponent, SkillsComponent, LanguagesComponent, LanguageItemComponent, SkillItemComponent, ServicesComponent, ServiceCardComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -26,6 +29,7 @@ import { SkillItemComponent } from './skills/skill-item/skill-item.component';
     MatSliderModule,
     FormsModule,
     ReactiveFormsModule,
+    MatRippleModule
   ],
 })
 export class HomeModule {}
