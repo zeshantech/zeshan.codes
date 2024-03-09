@@ -1,74 +1,13 @@
 <div class="m-auto text-center mt-12">
-    <p mat-h1 class="underline text-3xl font-medium">Technologies</p>
+    <p mat-h1 class="underline text-3xl font-medium">Expertise in these technologies</p>
 
-    <div class="flex flex-wrap justify-center gap-6">
-        <mat-card class="w-[36rem]">
-            <mat-card-header class="mat-card-header">
-                <mat-card-title>Frontend development</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-skill-item [title]="'Reactjs'" [initialValue]="95"></app-skill-item>
-                <app-skill-item [title]="'NextJs'" [initialValue]="60"></app-skill-item>
-                <app-skill-item [title]="'Angular'" [initialValue]="70"></app-skill-item>
-                <app-skill-item [title]="'Tauri'" [initialValue]="50"></app-skill-item>
-                <app-skill-item [title]="'React native'" [initialValue]="85"></app-skill-item>
-                <app-skill-item [title]="'IONIC'" [initialValue]="70"></app-skill-item>
-                <app-skill-item [title]="'TypeScript'" [initialValue]="88"></app-skill-item>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="w-[36rem]">
-            <mat-card-header class="mat-card-header">
-                <mat-card-title>Backend development</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-skill-item [title]="'NodeJs'" [initialValue]="90"></app-skill-item>
-                <app-skill-item [title]="'ExpressJs'" [initialValue]="90"></app-skill-item>
-                <app-skill-item [title]="'NestJs'" [initialValue]="80"></app-skill-item>
-                <app-skill-item [title]="'Micro services'" [initialValue]="70"></app-skill-item>
-                <app-skill-item [title]="'MoleculerJs'" [initialValue]="50"></app-skill-item>
-                <app-skill-item [title]="'AWS'" [initialValue]="40"></app-skill-item>
-                <app-skill-item [title]="'Firebase'" [initialValue]="70"></app-skill-item>
-                <app-skill-item [title]="'Supabase'" [initialValue]="70"></app-skill-item>
-                <app-skill-item [title]="'TypeScript'" [initialValue]="88"></app-skill-item>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="w-[36rem]">
-            <mat-card-header class="mat-card-header">
-                <mat-card-title>Database management</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-skill-item [title]="'MySql'" [initialValue]="80"></app-skill-item>
-                <app-skill-item [title]="'PostgresQl'" [initialValue]="70"></app-skill-item>
-                <app-skill-item [title]="'SqLite'" [initialValue]="40"></app-skill-item>
-                <app-skill-item [title]="'Oracle'" [initialValue]="60"></app-skill-item>
-                <app-skill-item [title]="'MariaDb'" [initialValue]="70"></app-skill-item>
-                <app-skill-item [title]="'MongoDb'" [initialValue]="90"></app-skill-item>
-                <app-skill-item [title]="'Redis'" [initialValue]="80"></app-skill-item>
-                <app-skill-item [title]="'Firebase'" [initialValue]="60"></app-skill-item>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="w-[36rem]">
-            <mat-card-header class="mat-card-header">
-                <mat-card-title>Hosting</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-skill-item [title]="'AWS'" [initialValue]="40"></app-skill-item>
-                <app-skill-item [title]="'Azure'" [initialValue]="30"></app-skill-item>
-                <app-skill-item [title]="'Docker'" [initialValue]="50"></app-skill-item>
-                <app-skill-item [title]="'GCP'" [initialValue]="50"></app-skill-item>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="w-[36rem]">
-            <mat-card-header class="mat-card-header">
-                <mat-card-title>Additional skills</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-skill-item [title]="'TypeScript'" [initialValue]="90"></app-skill-item>
-                <app-skill-item [title]="'Git'" [initialValue]="95"></app-skill-item>
-                <app-skill-item [title]="'Jira'" [initialValue]="60"></app-skill-item>
-                <app-skill-item [title]="'Kubernetes'" [initialValue]="30"></app-skill-item>
-                <app-skill-item [title]="'Monitoring'" [initialValue]="50"></app-skill-item>
-            </mat-card-content>
-        </mat-card>
+    <div class="flex flex-wrap justify-center gap-12">
+        <div *ngFor="let skillSet of skillsArray">
+
+            <mat-card class="w-32 h-32 flex justify-center items-center">
+                <img class="w-24 h-24" src="{{skillSet.imageUrl}}">
+            </mat-card>
+            <mat-card-subtitle class="mat-caption uppercase" >{{skillSet.name}}</mat-card-subtitle>
+        </div>
     </div>
 </div>

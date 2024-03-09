@@ -1,9 +1,0 @@
-<mat-card class="!shadow-none">
-    <div class="flex justify-between p-2 items-center">
-        <mat-card-subtitle>{{ title }}</mat-card-subtitle>
-        <mat-card-subtitle>{{ initialValue }}</mat-card-subtitle>
-    </div>
-    <mat-slider [discrete]="true">
-        <input matSliderThumb [value]="initialValue" (input)="onSliderChange($event)">
-    </mat-slider>
-</mat-card>
