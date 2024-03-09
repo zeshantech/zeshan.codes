@@ -15,7 +15,7 @@ import { LanguageItemComponent } from './languages/language-item/language-item.c
 import { ServicesComponent } from './services/services.component';
 import { ServiceCardComponent } from './services/service-card/service-card.component';
 import { MatRippleModule } from '@angular/material/core';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     FormsModule,
     ReactiveFormsModule,
     MatRippleModule,
-    MatProgressSpinnerModule,
+    MatProgressBarModule,
   ],
 })
 export class HomeModule {}
