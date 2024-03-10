@@ -1,13 +1,11 @@
-<div class="m-auto text-center mt-12">
-    <p mat-h1 class="underline text-3xl font-medium">Expertise in these technologies</p>
+<p mat-h1 class="underline text-3xl font-medium text-center">Expertise in these technologies</p>
 
-    <div class="flex flex-wrap justify-center gap-12">
-        <div *ngFor="let skillSet of skillsArray">
+<div class="flex flex-wrap justify-center gap-12">
+    <div *ngFor="let skillSet of skillsArray">
 
-            <mat-card class="w-32 h-32 flex justify-center items-center">
-                <img class="w-24 h-24" src="{{skillSet.imageUrl}}">
-            </mat-card>
-            <mat-card-subtitle class="mat-caption uppercase" >{{skillSet.name}}</mat-card-subtitle>
-        </div>
+        <mat-card class="w-32 h-32 flex justify-center items-center">
+            <img class="w-24 h-24" src="{{skillSet.imageUrl}}">
+        </mat-card>
+        <mat-card-subtitle class="mat-caption uppercase">{{skillSet.name}}</mat-card-subtitle>
     </div>
 </div>
