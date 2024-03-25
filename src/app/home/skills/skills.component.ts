@@ -18,7 +18,7 @@ export class SkillsComponent {
     {name: "Expressjs", imageUrl: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png'},
     {name: "Nestjs", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009756/ph8a6wv0nrrps778fcco.png'},
     {name: "Moleculerjs", imageUrl: 'https://moleculer-java.github.io/site/logo.png'},
-    // {name: "Spring boot", imageUrl: 'https://bitaacademy.com/wp-content/uploads/2020/01/Spring-1.png'},
+    {name: "Spring boot", imageUrl: 'https://bitaacademy.com/wp-content/uploads/2020/01/Spring-1.png'},
     {name: "Graphql", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/1200px-GraphQL_Logo.svg.png'},
     {name: "Firebase", imageUrl: 'https://miro.medium.com/v2/resize:fit:300/1*R4c8lHBHuH5qyqOtZb3h-w.png'},
     {name: "Supabase", imageUrl: 'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/299/square_480/supabase-logo-icon_1.png'},
