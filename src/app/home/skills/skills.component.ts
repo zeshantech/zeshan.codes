@@ -35,6 +35,8 @@ export class SkillsComponent {
     {name: "Genkins", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png'},
     {name: "Git", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009750/dmcnjjohqxrujnm27gy1.png'},
     { name: "Github", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009751/drztbwozq90q6iwnxwu8.png' },
+    { name: "Material Ui", imageUrl: 'https://mui.com/static/logo.png' },
+    { name: "Angular material", imageUrl: 'https://cdn.jsdelivr.net/gh/angular-material-extensions/pages@master/assets/angular-material-extensions-logo.png' },
   ];
 
   onSliderChange() {}
