@@ -33,7 +33,6 @@ export class SkillsComponent {
     { name: "MySql", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009755/xvwcprf2eohpc98dwjro.png' },
     { name: "Sqlite", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009761/lzfxckgyhkqlfrloar3i.png' },
     { name: "MongoDB", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009753/clo5kbdsb1mlfczslpn7.png' },
-    { name: "Firestore", imageUrl: 'https://seeklogo.com/images/F/firestore-logo-3828671CC5-seeklogo.com.png' },
     { name: "Redis", imageUrl: 'https://www.stackery.io/assets/images/posts/redis-cache-cluster-support/featured.svg' },
     
     // DEVOPS
