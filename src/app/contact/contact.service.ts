@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -11,7 +10,7 @@ export class ContactService {
 
   async sendEmail(data: Record<string, string>) {
     return this.http
-      .post(`${environment.nodeServerUrl}/email`, data)
+      .post(`${environment.nodeServerUrl}/mail/send-contact-details-to-owner`, data)
       .subscribe();
   }
 }

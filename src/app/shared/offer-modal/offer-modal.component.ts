@@ -20,7 +20,6 @@ import { OfferModalService } from './offer-modal.service';
 @Component({
   selector: 'app-offer-modal',
   templateUrl: './offer-modal.component.html',
-  styleUrls: ['./offer-modal.component.css'],
   standalone: true,
   imports: [
     FormsModule,
