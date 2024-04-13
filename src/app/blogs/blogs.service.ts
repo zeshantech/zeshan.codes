@@ -17,19 +17,19 @@ export class BlogsService {
   }
 
   async getBlogs(limit = 10, skip = 0) {
-    // try {
-    //   const { data, error } = await this.supabase
-    //     .from('blogs')
-    //     .select('*')
-    //     .order('created_at', { ascending: false })
-    //     .limit(limit).abortSignal
+    try {
+      const { data, error } = await this.supabase
+        .from('blogs')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .range(skip, limit);
 
-    //   if (error) throw error;
+      if (error) throw error;
 
-    //   return data;
-    // } catch (error) {
-    //   console.error('Error getting blogs:', error);
-    //   throw error; // Re-throw for error handling
-    // }
+      return data;
+    } catch (error) {
+      console.error('Error getting blogs:', error);
+      throw error;
+    }
   }
 }
