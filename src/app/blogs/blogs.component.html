@@ -1,0 +1,9 @@
+<div class="flex flex-wrap gap-12 py-12 justify-center">
+    <app-blog-card *ngFor="let blog of blogList"
+    [imageUrl]="blog.imageUrl"
+    [title]="blog.title"
+    [ID]="blog.ID"
+    [likesCount]="blog.likesCount"
+    [commentsCount]="blog.commentsCount"
+    ></app-blog-card>
+</div>

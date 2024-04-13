@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { TalkComponent } from './talk/talk.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { SocialMediaIconsComponent } from './shared/social-media-icons/social-media-icons.component';
 
 @NgModule({
   declarations: [AppComponent, TalkComponent],
