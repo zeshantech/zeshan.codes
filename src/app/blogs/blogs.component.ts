@@ -1,151 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BlogsService } from './blogs.service';
+import { BlogType } from './types';
 
 @Component({
   selector: 'app-blogs',
   templateUrl: './blogs.component.html',
-  styleUrl: './blogs.component.css',
+  styleUrls: ['./blogs.component.css'],
 })
-export class BlogsComponent {
-  blogList = [
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-    {
-      imageUrl: 'https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/463_463/1646374701.jpg?im=FitAndFill=(826,465)',
-      title: 'lorem is not just a normal actually a generator.',
-      ID: '111',
-      likesCount: 100,
-      commentsCount: 200,
-  },
-  ];
+export class BlogsComponent implements OnInit {
+  blogList: BlogType[] = [];
+
+  constructor(private blogsService: BlogsService) {}
+
+  async ngOnInit(): Promise<void> {
+    const data = await this.blogsService.getBlogs();
+    const mappedData = data.map((b) => ({
+      imageUrl: b.image_url,
+      title: b.title,
+      ID: b.ID,
+      likesCount: b.likes_count,
+      commentsCount: 0,
+    }));
+    this.blogList = mappedData;
+  }
 }

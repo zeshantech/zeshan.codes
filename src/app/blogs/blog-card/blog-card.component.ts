@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './blog-card.component.css',
 })
 export class BlogCardComponent {
-  @Input() ID!: string;
+  @Input() ID!: number;
   @Input() imageUrl!: string;
   @Input() title!: string;
   @Input() likesCount!: number;
