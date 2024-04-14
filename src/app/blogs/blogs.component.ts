@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogsService } from './blogs.service';
-import { BlogType } from './types';
 
 @Component({
   selector: 'app-blogs',
@@ -24,3 +23,11 @@ export class BlogsComponent implements OnInit {
     this.blogList = mappedData;
   }
 }
+
+export type BlogType = {
+  imageUrl: string;
+  title: string;
+  ID: number;
+  likesCount: number;
+  commentsCount: number;
+};

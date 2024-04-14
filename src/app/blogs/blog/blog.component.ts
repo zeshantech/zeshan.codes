@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BlogsService } from '../blogs.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,16 +8,37 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent implements OnInit {
-  ID!: number;
+  blog!: BlogType;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private blogsService: BlogsService
+  ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      console.log(params,);
+    this.route.params.subscribe(async (params) => {
+      const blog = await this.blogsService.getBlogById(+params['ID']);
+      this.blog = {
+        ID: blog[0].ID,
+        imageUrl: blog[0].image_url,
+        likesCount: blog[0].likes_count,
+        title: blog[0].title,
+        content: blog[0].content,
+        createdAt: blog[0].created_at,
+        commentsCount: 0,
+      };
+      console.log(this.blog);
       
-      this.ID = +params['ID'];
-      console.log('Blog ID:', this.ID);
     });
   }
 }
+
+export type BlogType = {
+  ID: number;
+  content: string;
+  createdAt: Date;
+  imageUrl: string;
+  likesCount: number;
+  title: string;
+  commentsCount: number;
+};

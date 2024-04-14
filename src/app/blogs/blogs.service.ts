@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SupabaseClient, createClient } from '@supabase/supabase-js';
 import { environment } from '../../environments/environment';
-import { GetBlogType } from './types';
 
 @Injectable({
   providedIn: 'root',
@@ -34,4 +33,31 @@ export class BlogsService {
       throw error;
     }
   }
+
+  async getBlogById(ID: number): Promise<GetBlogType[]> {
+    try {
+      const { data, error } = await this.supabase
+        .from('blog')
+        .select('*')
+        .eq('ID', ID)
+        .returns<GetBlogType[]>();
+
+      if (error) throw error;
+
+      return data;
+    } catch (error) {
+      console.error('Error getting blogs:', error);
+      throw error;
+    }
+  }
 }
+
+export type GetBlogType = {
+  ID: number;
+  active: boolean;
+  content: string;
+  created_at: Date;
+  image_url: string;
+  likes_count: number;
+  title: string;
+};
