@@ -21,12 +21,13 @@ export class SkillsComponent {
     { name: "Expressjs", imageUrl: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png' },
     { name: "Nestjs", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009756/ph8a6wv0nrrps778fcco.png' },
     { name: "Moleculerjs", imageUrl: 'https://moleculer-java.github.io/site/logo.png' },
-    { name: "Spring boot", imageUrl: 'https://bitaacademy.com/wp-content/uploads/2020/01/Spring-1.png' },
+    { name: "Django", imageUrl: 'https://juststickers.in/wp-content/uploads/2016/05/django-badge.png' },
     { name: "Microservices", imageUrl: 'https://media.licdn.com/dms/image/C5112AQEEcR2mak_D8Q/article-cover_image-shrink_720_1280/0/1563209644780?e=2147483647&v=beta&t=U76cYNVN1rJWoYx1fKFsMW9-3DbfyImlwWGFhLLc3qk' },
     { name: "Graphql", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/1200px-GraphQL_Logo.svg.png' },
     { name: "Firebase", imageUrl: 'https://miro.medium.com/v2/resize:fit:300/1*R4c8lHBHuH5qyqOtZb3h-w.png' },
     { name: "Supabase", imageUrl: 'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/299/square_480/supabase-logo-icon_1.png' },
     { name: "Numpy", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710018441/jhwrbhifybvnbszvt62t.png' },
+    { name: "Stripe", imageUrl: 'https://static-00.iconduck.com/assets.00/stripe-icon-2048x2048-091bxp68.png' },
 
     // DB
     { name: "PostgresQl", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png' },
