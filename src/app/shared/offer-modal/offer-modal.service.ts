@@ -54,7 +54,7 @@ export class OfferModalService {
   }
 
   async getFileUrl(ID: string) {
-    const result = awStorage.getFile(
+    const result = awStorage.getFileDownload(
       environment.appwrite.clientOffersBucketID,
       ID
     );
@@ -64,29 +64,15 @@ export class OfferModalService {
 
   async uploadPdfToCloud(file: File): Promise<string | void> {
     try {
-      const { $id } = await awStorage.createFile(
+      const { $id, ...data } = await awStorage.createFile(
         environment.appwrite.clientOffersBucketID,
         ID.unique(),
         file
       );
 
-      const publicUrl = await this.getFileUrl($id);
+      const { href: publicUrl } = await this.getFileUrl($id);
 
-      console.log(publicUrl);
-
-      // const { data, error } = await this.supabase.storage
-      //   .from('offers')
-      //   .upload(`${uuidv4()}.pdf`, file);
-
-      // if (error) {
-      //   throw error;
-      // }
-
-      // const {
-      //   data: { publicUrl },
-      // } = this.supabase.storage.from('offers').getPublicUrl(data.path);
-
-      return 'publicUrl';
+      return publicUrl;
     } catch (error) {
       alert((error as Error).message);
     }
