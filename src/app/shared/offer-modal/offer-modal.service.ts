@@ -1,22 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SupabaseClient, createClient } from '@supabase/supabase-js';
 import { environment } from '../../../environments/environment';
 import jsPDF from 'jspdf';
 import { v4 as uuidv4 } from 'uuid';
+import { ID, awStorage } from '../../lib/appwrite';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OfferModalService {
-  private supabase: SupabaseClient;
-
-  constructor(private http: HttpClient) {
-    this.supabase = createClient(
-      environment.supabaseUrl,
-      environment.supabaseKey
-    );
-  }
+  constructor(private http: HttpClient) {}
 
   async sendPDFViaWhatsApp(pdfUrl: string) {
     const message = `Here's your offer PDF: ${pdfUrl}`;
@@ -60,21 +53,40 @@ export class OfferModalService {
     });
   }
 
+  async getFileUrl(ID: string) {
+    const result = awStorage.getFile(
+      environment.appwrite.clientOffersBucketID,
+      ID
+    );
+
+    return result;
+  }
+
   async uploadPdfToCloud(file: File): Promise<string | void> {
     try {
-      const { data, error } = await this.supabase.storage
-        .from('offers')
-        .upload(`${uuidv4()}.pdf`, file);
+      const { $id } = await awStorage.createFile(
+        environment.appwrite.clientOffersBucketID,
+        ID.unique(),
+        file
+      );
 
-      if (error) {
-        throw error;
-      }
+      const publicUrl = await this.getFileUrl($id);
 
-      const {
-        data: { publicUrl },
-      } = this.supabase.storage.from('offers').getPublicUrl(data.path);
+      console.log(publicUrl);
 
-      return publicUrl;
+      // const { data, error } = await this.supabase.storage
+      //   .from('offers')
+      //   .upload(`${uuidv4()}.pdf`, file);
+
+      // if (error) {
+      //   throw error;
+      // }
+
+      // const {
+      //   data: { publicUrl },
+      // } = this.supabase.storage.from('offers').getPublicUrl(data.path);
+
+      return 'publicUrl';
     } catch (error) {
       alert((error as Error).message);
     }
