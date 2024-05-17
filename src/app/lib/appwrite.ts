@@ -1,4 +1,4 @@
-import { Client, Account, Storage, ID } from "appwrite";
+import { Client, Account, Storage, ID, Functions } from "appwrite";
 
 export const client = new Client();
 
@@ -8,5 +8,6 @@ client
 
 export const awAccount = new Account(client);
 export const awStorage = new Storage(client);
+export const awFunction = new Functions(client);
 
 export { ID } from "appwrite";

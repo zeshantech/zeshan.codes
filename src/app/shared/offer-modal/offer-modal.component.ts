@@ -62,7 +62,7 @@ export class OfferModalComponent {
 
   async createOffer(): Promise<void> {
     const formData = this.offerFormGroup.value;
-    const doc = this.offerModalService.generatePdf(formData);
+    const doc = await this.offerModalService.generatePdf(formData);
     const url = await this.offerModalService.uploadPdfToCloud(doc);
 
     if (url) {
