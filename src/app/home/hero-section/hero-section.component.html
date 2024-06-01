@@ -1,22 +1,24 @@
-<section class="hero-section flex items-end justify-center mx-auto relative h-[60vh] container">
-    <div class="pt-12 md:pt-0 container pb-8 space-y-8 z-10">
-        <div>
-            <span class="uppercase mb-2">
-                Software engineer
-            </span>
-            <div>
-                <p mat-h1 class="text-3xl font-medium !mb-4">Hello, I'm Zeshan Shakil</p>
-                <p class="mat-subheading-2">Welcome to my portfolio! Here, you'll find insights into my journey as a Full Stack Engineer, including my skills, experiences, and projects. Dive in to discover more about what I have to offer!</p>
-            </div>
-            <div class="mt-8 space-x-2">
-                <button mat-stroked-button (click)="openOfferModal()">Create offer</button>
-                <button mat-flat-button color="primary" routerLink="/contact">Get in touch</button>
-            </div>
-        </div>
-        <mat-toolbar color="secondary" class="space-x-2" mat-raised-button>
-            <span class="spacer"></span>
-            <button mat-flat-button color="primary" (click)="scheduleMeeting()">Schedule a meeting</button>
+<section class="h-[60vh] bg-fixed bg-cover bg-center bg-no-repeat flex justify-center m-auto" style="background-image: url(https://wallpapercave.com/wp/BAIavaT.jpg)">
+    <div class="flex justify-center flex-col m-auto text-white">
+        <h1 class="!text-8xl font-extrabold text-center">
+            Zeeshan Shakeel
+        </h1>
+        <mat-toolbar class="space-x-2 justify-center !bg-transparent">
+            Software engineer
+        </mat-toolbar>
+
+        <mat-divider class="!m-8"></mat-divider>
+
+        <p class="text-xl text-center w-[50vw]">
+            Welcome to my portfolio! Here, you'll find insights into my journey as a Full Stack Engineer, including my skills, experiences, and projects. Dive in to discover more about what I have to offer!
+        </p>
+
+        <mat-divider class="!m-8"></mat-divider>
+
+        <mat-toolbar class="space-x-2 !backdrop-blur-md !bg-transparent justify-center">
+            <button mat-stroked-button  (click)="scheduleMeeting()">Schedule meeting</button>
+            <button mat-stroked-button (click)="openOfferModal()">Create offer</button>
+            <button mat-stroked-button routerLink="/contact">Get in touch</button>
         </mat-toolbar>
     </div>
-    <img src="https://res.cloudinary.com/djvfnekle/image/upload/v1709528429/bg5zhk5d0mrkyqbnsg0t.png" alt="3D Modal Image" class="max-w-lg hidden sm:block absolute md:static" />
 </section>

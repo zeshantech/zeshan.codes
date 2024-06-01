@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
 import jsPDF from 'jspdf';
-import { v4 as uuidv4 } from 'uuid';
-import { ID, awStorage } from '../../lib/appwrite';
+import { nanoid } from 'nanoid';
+import { Storage } from 'appwrite';
+import { client } from '../../lib/appwrite';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OfferModalService {
-  constructor(private http: HttpClient) {}
+  storage = new Storage(client);
 
   async sendPDFViaWhatsApp(pdfUrl: string) {
     const message = `Here's your offer PDF: ${pdfUrl}`;
@@ -53,26 +53,36 @@ export class OfferModalService {
     });
   }
 
-  async getFileUrl(ID: string) {
-    const result = awStorage.getFileDownload(
-      environment.appwrite.clientOffersBucketID,
-      ID
-    );
-
-    return result;
-  }
-
   async uploadPdfToCloud(file: File): Promise<string | void> {
     try {
-      const { $id, ...data } = await awStorage.createFile(
-        environment.appwrite.clientOffersBucketID,
-        ID.unique(),
+      // const { data, error } = await this.supabase.storage
+      //   .from('offers')
+      //   .upload(`${nanoid()}.pdf`, file);
+
+      const response = await this.storage.createFile(
+        environment.appwrite.bucketId,
+        `${nanoid()}.pdf`,
         file
       );
 
-      const { href: publicUrl } = await this.getFileUrl($id);
+      // if (error) {
+      //   throw error;
+      // }
 
-      return publicUrl;
+      const result = this.storage.getFileDownload(
+        environment.appwrite.bucketId,
+        response.$id
+      );
+
+      console.log(result);
+
+      // const {
+      //   data: { publicUrl },
+      // } = this.supabase.storage.from('offers').getPublicUrl(data.path);
+
+      console.log(response);
+
+      return 'publicUrl';
     } catch (error) {
       alert((error as Error).message);
     }

@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-option-card',
   templateUrl: './option-card.component.html',
-  styleUrl: './option-card.component.css',
 })
 export class OptionCardComponent {
   byCall() {

@@ -6,9 +6,10 @@ import { ServicesComponent } from './services.component';
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 
 @NgModule({
-  declarations: [ServicesComponent, CardComponent],
+  declarations: [ServicesComponent, CardComponent, HeroSectionComponent],
   imports: [
     CommonModule,
     ServicesRoutingModule,

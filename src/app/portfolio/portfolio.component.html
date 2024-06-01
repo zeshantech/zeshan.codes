@@ -1,73 +1,19 @@
-<div class="flex flex-wrap gap-12 py-12 justify-center">
+<app-hero-section></app-hero-section>
 
-  <app-card [title]="'Aman.Al.Rajhi Bank app'" [subtitle]="
-      'Bank application developed in (React Native · Kafka)'
-    " [imageUrl]="
-      'https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/52/14/c5/5214c530-b277-91da-00cc-cc7537e808c3/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x600wa.png'
-    " [webLink]="'https://www.alrajhibank.com.sa/EN'" [playStoreLink]="
-      'https://play.google.com/store/apps/details?id=com.alrajhi.aman&hl=en&gl=US&pli=1'
-    " [appStoreLink]="'https://apps.apple.com/us/app/aman-al-rajhi-app/id1586518707'">
-  </app-card>
+<div class="container m-auto">
+  <mat-tab-group>
+    <mat-tab label="Mobile apps">
+      <div class="flex flex-wrap gap-12 justify-center my-12">
+        <app-card *ngFor="let app of mobileApps" [name]="app.name" [description]="app.description" [playStoreLink]="app.playStoreLink" [appStoreLink]="app.appStoreLink" [ratings]="app.ratings" [imageUrl]="app.imageUrl">
+        </app-card>
+      </div>
+    </mat-tab>
 
-  <app-card [title]="'Aesthetics Global Evolution'" [subtitle]="
-      'Skincare app developed in (Nest.js · IONIC · Angular · PostgresQl · CometChat)'
-    " [imageUrl]="
-      'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/13/12/851312ad-0802-9d84-5368-3afc533ca2f4/AppIcon-0-0-1x_U007epad-0-85-220.png/1200x600wa.png'
-    " [webLink]="'https://ageforyou.com/'" [playStoreLink]="
-      'false'
-    " [appStoreLink]="'https://apps.apple.com/us/app/aesthetics-global-evolution/id1572335431'">
-  </app-card>
-
-  <app-card [title]="'Muslim Kids TV (app & web)'" [subtitle]="
-  'Islamic Education and Fun platform <br>  developed in (React Native · React.js · django · mariaDb · Azure)'
-  " [imageUrl]="
-  'https://yt3.googleusercontent.com/lMJU3L-h-WTgp2miojRlW-EbvizS29i3BbCBQmQlUMB7DafSeo6587GhQH0BjE5xFlNbr9DMw1w=s900-c-k-c0x00ffffff-no-rj'
-  " [webLink]="'https://muslimkids.tv/new/'" [playStoreLink]="
-  'https://play.google.com/store/apps/details?id=com.mktv.steelkiwi.muslimkidstv&hl=en&gl=US'
-  " [appStoreLink]="'https://apps.apple.com/us/app/muslim-kids-tv/id1189900377'">
-  </app-card>
-
-  <app-card [title]="'Servr GuestX -Guest Experience'" [subtitle]="
-      'Application of Hotelling services provider developed in (Node.js · React Native · MySql · Stripe)'
-    " [imageUrl]="
-      'https://www.servrhotels.com/wp-content/uploads/2020/12/servr-macbook-16094-copy-1024x623.png'
-    " [webLink]="'https://www.servrhotels.com/'" [playStoreLink]="
-      'https://play.google.com/store/apps/details?id=com.servr&hl=en&gl=US'
-    " [appStoreLink]="'false'">
-  </app-card>
-
-  <app-card [title]="'Fits training (app & admin)'" [subtitle]="'A gym app developed in (Node.js · Nest.js · React Native · React.js · MySql · MongoDb · Stripe)'" [playStoreLink]="'false'" [playStoreLink]="'false'" [webLink]="'false'" [appStoreLink]="'false'" [imageUrl]="'https://mir-s3-cdn-cf.behance.net/project_modules/disp/e0939f4550228.5601edce119dc.jpg'"></app-card>
-
-  <app-card [title]="'HANDZ TEXTILE'" [subtitle]="
-      'Ecommerce store developed in (Node.js · React.js · MySQL · Amazon Web Services (AWS))'
-    " [imageUrl]="
-      'https://www.servrhotels.com/wp-content/uploads/2020/12/servr-macbook-16094-copy-1024x623.png'
-    " [webLink]="'https://handztextile.com/'" [playStoreLink]="
-      'false'
-    " [appStoreLink]="'false'">
-  </app-card>
-
-  <app-card [title]="'4S (iot devices management)'" [subtitle]="
-      'Things tracking app by sensors (Node.js · Next.js · MySQL · Amazon Web Services (AWS) · MQTT)'
-    " [imageUrl]="
-      'https://e0.pxfuel.com/wallpapers/251/936/desktop-wallpaper-iot-internet-of-things.jpg'
-    " [webLink]="'false'">
-  </app-card>
-
-  <app-card
-    [title]="'Ordering Ethopia'"
-    [subtitle]="
-      'A e-commerce website developing in (Vendure · Nest.js · React.js · MySQL · Stripe)'
-    "
-    [imageUrl]="'https://nestjs.com/img/nest-og.png'"
-    [webLink]="'https://coruscating-cat-13eb68.netlify.app/'"
-  >
-  </app-card>
-
-  <app-card [title]="'Zgaya Hub own'" [subtitle]="
-      'A movie website · my own project developing in (Nest.js · Microservices · React.js · Angular · PostgresQl · Amazon Web Services (AWS) · Firebase)'
-    " [imageUrl]="
-      'https://png.pngtree.com/thumb_back/fw800/background/20231007/pngtree-illustration-of-a-video-player-app-image_13556967.png'
-    " [webLink]="'false'">
-  </app-card>
+    <mat-tab label="WebApps and Websites">
+      <div class="flex flex-wrap gap-12 justify-center my-12">
+        <app-card *ngFor="let app of websites" [name]="app.name" [description]="app.description" [imageUrl]="app.imageUrl" [webLink]="app.webLink">
+        </app-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>

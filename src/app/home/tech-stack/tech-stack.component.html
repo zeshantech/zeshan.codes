@@ -1,0 +1,38 @@
+<p mat-h1 class="text-4xl text-center">My tech stack</p>
+
+<div class="container m-auto my-6">
+
+    <mat-tab-group>
+        <mat-tab label="Backend">
+            <div class="flex flex-wrap justify-center gap-12 mt-12">
+                <div *ngFor="let skillSet of backendTechnologies">
+                    <app-tach-stack-card [imageUrl]="skillSet.imageUrl" [name]="skillSet.name"></app-tach-stack-card>
+                </div>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Frontend">
+            <div class="flex flex-wrap justify-center gap-12 mt-12">
+                <div *ngFor="let skillSet of frontendTechnologies">
+                    <app-tach-stack-card [imageUrl]="skillSet.imageUrl" [name]="skillSet.name"></app-tach-stack-card>
+                </div>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Databases">
+            <div class="flex flex-wrap justify-center gap-12 mt-12">
+                <div *ngFor="let skillSet of databases">
+                    <app-tach-stack-card [imageUrl]="skillSet.imageUrl" [name]="skillSet.name"></app-tach-stack-card>
+                </div>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Devops">
+            <div class="flex flex-wrap justify-center gap-12 mt-12">
+                <div *ngFor="let skillSet of devopsTechnologies">
+                    <app-tach-stack-card [imageUrl]="skillSet.imageUrl" [name]="skillSet.name"></app-tach-stack-card>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

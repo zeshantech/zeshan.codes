@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SocialMediaIconsComponent } from '../shared/social-media-icons/social-media-icons.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
@@ -17,7 +18,8 @@ import { SocialMediaIconsComponent } from '../shared/social-media-icons/social-m
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    SocialMediaIconsComponent
+    SocialMediaIconsComponent,
+    MatSlideToggleModule,
   ],
 })
 export class LayoutModule {}

@@ -1,13 +1,12 @@
-import { Client, Account, Storage, ID, Functions } from "appwrite";
+import { Client, Account } from "appwrite";
+import { environment } from "../../environments/environment";
 
 export const client = new Client();
 
 client
-  .setEndpoint("https://cloud.appwrite.io/v1")
-  .setProject("6645f745001e483e057d");
+  .setEndpoint(environment.appwrite.url)
+  .setProject(environment.appwrite.projectId); // Replace with your project ID
 
-export const awAccount = new Account(client);
-export const awStorage = new Storage(client);
-export const awFunction = new Functions(client);
+export const account = new Account(client);
 
 export { ID } from "appwrite";

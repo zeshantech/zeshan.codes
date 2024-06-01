@@ -1,0 +1,6 @@
+<p mat-h1 class="text-4xl text-center">My development approach</p>
+
+
+<div class="flex flex-wrap justify-center gap-12 mt-12">
+    <app-development-approach-card *ngFor="let approach of approaches" [title]="approach.title" [description]="approach.description" [imageUrl]="approach.imageUrl"></app-development-approach-card>
+</div>

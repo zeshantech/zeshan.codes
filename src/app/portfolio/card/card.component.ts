@@ -3,13 +3,23 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  @Input() description!: string;
+  @Input() name!: string;
+  @Input() playStoreLink?: string; // make it optional
+  @Input() ratings?: number; // make it optional
   @Input() imageUrl!: string;
-  @Input() title!: string;
-  @Input() subtitle!: string;
-  @Input() playStoreLink!: string;
-  @Input() appStoreLink!: string;
-  @Input() webLink?: string; // Make codeLink optional
+  @Input() appStoreLink?: string; // make it optional
+  @Input() webLink?: string; // make it optional
+}
+
+export interface ICardProps {
+  description: string;
+  name: string;
+  playStoreLink?: string;
+  ratings?: number;
+  imageUrl: string;
+  appStoreLink?: string;
+  webLink?: string;
 }

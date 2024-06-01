@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrl: './services.component.css',
 })
 export class ServicesComponent {
   public router: Router = inject(Router);

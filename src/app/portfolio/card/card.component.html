@@ -1,13 +1,13 @@
-<mat-card class="p-2 text-center justify-between space-y-4 max-w-96 h-full">
+<mat-card class="p-2 text-center justify-between space-y-4 w-96 h-full">
     <div class="space-y-4 flex flex-col items-center">
-        <img [src]="imageUrl" alt="" class="h-64 w-full">
-        <mat-card-title>{{ title }}</mat-card-title>
-        <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
+        <img [src]="imageUrl" alt="" class="w-full h-48 object-cover ">
+        <mat-card-title class="!mb-2">{{ name }}</mat-card-title>
+        <mat-card-subtitle [innerHTML]="description"></mat-card-subtitle>
     </div>
 
     <div class="flex w-full gap-1">
-        <a *ngIf="playStoreLink" disabled="{{playStoreLink === 'false' ? true : false}}" [href]="playStoreLink" target="_blank" class="w-full" mat-stroked-button color="primary">Play store</a>
-        <a *ngIf="appStoreLink" disabled="{{appStoreLink === 'false' ? true : false}}" [href]="appStoreLink" target="_blank" class="w-full" mat-stroked-button color="primary">App store</a>
-        <a *ngIf="webLink" disabled="{{webLink === 'false' ? true : false}}" [href]="webLink" target="_blank" class="w-full" mat-stroked-button color="primary">Website</a>
+        <a *ngIf="playStoreLink" [href]="playStoreLink" target="_blank" class="w-full" mat-stroked-button color="primary">Play store</a>
+        <a *ngIf="appStoreLink" [href]="appStoreLink" target="_blank" class="w-full" mat-stroked-button color="primary">App store</a>
+        <a *ngIf="webLink" [href]="webLink" target="_blank" class="w-full" mat-stroked-button color="primary">Website</a>
     </div>
 </mat-card>

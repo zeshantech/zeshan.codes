@@ -5,7 +5,6 @@ import { TalkService } from './talk.service';
 @Component({
   selector: 'app-talk',
   templateUrl: './talk.component.html',
-  styleUrl: './talk.component.css',
 })
 export class TalkComponent {
   @ViewChild('talkjsContainer') talkjsContainer!: ElementRef;
