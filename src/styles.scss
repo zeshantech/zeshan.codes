@@ -9,7 +9,6 @@ $dark-theme: mat.define-dark-theme(
       primary: mat.define-palette(mat.$pink-palette),
       accent: mat.define-palette(mat.$blue-grey-palette),
     ),
-    // Only include `typography` and `density` in the default dark theme.
     typography: mat.define-typography-config(),
     density: 0,
   )
@@ -25,14 +24,14 @@ $light-theme: mat.define-light-theme(
   )
 );
 
-// Apply the dark theme by default
-@include mat.all-component-themes($dark-theme);
+// Apply the light theme by default
+@include mat.all-component-themes($light-theme);
 
-// Apply the light theme when the document element attribute is changed to 'light'
-:root[theme="light"] {
+// Apply the dark theme when the document element attribute is changed to 'dark'
+:root[theme="dark"] {
   // Use the `-color` mixins to only apply color styles without reapplying the same
   // typography and density styles.
-  @include mat.all-component-themes($light-theme);
+  @include mat.all-component-themes($dark-theme);
 }
 
 html,

@@ -5,15 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  get lightTheme(): boolean {
-    return document.documentElement.getAttribute('theme') === 'light';
+  get darkTheme(): boolean {
+    return document.documentElement.getAttribute('theme') === 'dark';
   }
 
   toggleTheme() {
-    if (this.lightTheme) {
+    if (this.darkTheme) {
       document.documentElement.setAttribute('theme', '');
     } else {
-      document.documentElement.setAttribute('theme', 'light');
+      document.documentElement.setAttribute('theme', 'dark');
     }
   }
 }
