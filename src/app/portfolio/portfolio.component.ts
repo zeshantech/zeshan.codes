@@ -10,7 +10,7 @@ export class PortfolioComponent {
     {
       name: 'Aman.Al.Rajhi Bank app',
       description:
-        'Bank application developed in <br>  <small>(React Native)<small>',
+        'Bank application developed in <br>  <small>(Nest.js, React Native, MySql)<small>',
       playStoreLink:
         'https://play.google.com/store/apps/details?id=com.alrajhi.aman&hl=en&gl=US&pli=1',
       appStoreLink:
