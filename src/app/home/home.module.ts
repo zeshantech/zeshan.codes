@@ -20,6 +20,7 @@ import { TachStackCardComponent } from './tech-stack/tach-stack-card/tach-stack-
 import { MatTabsModule } from '@angular/material/tabs';
 import { DevelopmentApproachComponent } from './development-approach/development-approach.component';
 import { DevelopmentApproachCardComponent } from './development-approach/development-approach-card/development-approach-card.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { DevelopmentApproachCardComponent } from './development-approach/develop
     FormsModule,
     ReactiveFormsModule,
     MatRippleModule,
+    MatProgressSpinnerModule,
     MatDividerModule,
     MatTabsModule,
   ],
