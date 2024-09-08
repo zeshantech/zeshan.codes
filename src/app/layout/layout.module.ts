@@ -4,11 +4,16 @@ import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SocialMediaIconsComponent } from '../shared/social-media-icons/social-media-icons.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
@@ -20,6 +25,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatButtonModule,
     SocialMediaIconsComponent,
     MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatListModule,
   ],
 })
 export class LayoutModule {}

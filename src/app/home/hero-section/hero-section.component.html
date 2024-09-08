@@ -1,24 +1,36 @@
-<section class="h-[60vh] bg-fixed bg-cover bg-center bg-no-repeat flex justify-center m-auto" style="background-image: url(https://alijafarian.com/wp-content/uploads/2019/12/featured-software-engineer-advice.jpg)">
-    <div class="flex justify-center flex-col m-auto text-white">
-        <h1 class="!text-8xl font-extrabold text-center">
-            Zeeshan Shakeel
-        </h1>
-        <mat-toolbar class="space-x-2 justify-center !bg-transparent">
-            Software engineer
-        </mat-toolbar>
+<section
+  class="h-[70vh] bg-fixed bg-cover bg-center bg-no-repeat flex justify-center m-auto container"
+>
+  <!-- style="background-image: url(https://media.contra.com/image/upload/v0ixjdumtjb5xvclizhw)" -->
+  <div class="flex justify-center flex-col m-auto text-white w-[40%] pt-48">
+    <h1 class="!text-7xl font-extrabold">Zeeshan Shakeel</h1>
+    <h2 class="!text-3xl !font-light">Full Stack Developer</h2>
 
-        <mat-divider class="!m-8"></mat-divider>
+    <p class="pt-8">
+      Here, you'll find insights into my journey as a
+      Full Stack Engineer.
+      Dive in to discover more about what I have to offer!
+    </p>
 
-        <p class="text-xl text-center w-[50vw]">
-            Welcome to my portfolio! Here, you'll find insights into my journey as a Full Stack Engineer, including my skills, experiences, and projects. Dive in to discover more about what I have to offer!
-        </p>
+    <mat-divider class="!m-8"></mat-divider>
 
-        <mat-divider class="!m-8"></mat-divider>
-
-        <mat-toolbar class="space-x-2 !backdrop-blur-md !bg-transparent justify-center">
-            <button mat-stroked-button  (click)="scheduleMeeting()">Schedule meeting</button>
-            <button mat-stroked-button (click)="openOfferModal()">Create offer</button>
-            <button mat-stroked-button routerLink="/contact">Get in touch</button>
-        </mat-toolbar>
+    <div
+      class="space-x-2 !backdrop-blur-md !bg-transparent justify-center"
+    >
+      <button mat-stroked-button (click)="scheduleMeeting()">
+        Schedule meeting
+      </button>
+      <button mat-stroked-button (click)="openOfferModal()">
+        Create offer
+      </button>
+      <button mat-stroked-button routerLink="/contact">Get in touch</button>
     </div>
+  </div>
+
+  <div>
+    <img
+      src="https://media.contra.com/image/upload/v0ixjdumtjb5xvclizhw"
+      width="700"
+    />
+  </div>
 </section>
