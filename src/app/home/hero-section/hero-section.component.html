@@ -1,36 +1,25 @@
 <section
-  class="h-[70vh] bg-fixed bg-cover bg-center bg-no-repeat flex justify-center m-auto container"
->
-  <!-- style="background-image: url(https://media.contra.com/image/upload/v0ixjdumtjb5xvclizhw)" -->
-  <div class="flex justify-center flex-col m-auto text-white w-[40%] pt-48">
-    <h1 class="!text-7xl font-extrabold">Zeeshan Shakeel</h1>
-    <h2 class="!text-3xl !font-light">Full Stack Developer</h2>
+  class="h-[30vh] md:h-[60vh] bg-fixed bg-cover bg-center bg-no-repeat flex flex-row justify-center m-auto container">
+  <div class="flex justify-center flex-col m-auto w-full lg:w-[50%]">
+    <h1 class="!text-4xl md:!text-7xl text-center md:text-start font-extrabold">Zeeshan Shakeel</h1>
+    <h2 class="!text-xl md:text-3xl text-center md:text-start !font-light">Full Stack Developer</h2>
 
-    <p class="pt-8">
-      Here, you'll find insights into my journey as a
-      Full Stack Engineer.
+    <p class="pt-8 text-center md:text-start">
+      Here, you'll find insights into my journey as a Full Stack Engineer.
       Dive in to discover more about what I have to offer!
     </p>
 
     <mat-divider class="!m-8"></mat-divider>
 
-    <div
-      class="space-x-2 !backdrop-blur-md !bg-transparent justify-center"
-    >
-      <button mat-stroked-button (click)="scheduleMeeting()">
+    <div class="space-x-2 !backdrop-blur-md !bg-transparent justify-center">
+      <button mat-stroked-button (click)="redirectToCalender()">
         Schedule meeting
       </button>
-      <button mat-stroked-button (click)="openOfferModal()">
-        Create offer
-      </button>
+      <button mat-stroked-button (click)="openOfferModal()">Create offer</button>
       <button mat-stroked-button routerLink="/contact">Get in touch</button>
     </div>
   </div>
 
-  <div>
-    <img
-      src="https://media.contra.com/image/upload/v0ixjdumtjb5xvclizhw"
-      width="700"
-    />
-  </div>
+  <img src="https://media.contra.com/image/upload/v0ixjdumtjb5xvclizhw" class="hidden lg:block w-[42rem]" />
+
 </section>

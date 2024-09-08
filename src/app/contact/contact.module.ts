@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { SocialMediaIconsComponent } from '../shared/social-media-icons/social-media-icons.component';
+import { MeetingButtonsComponent } from './meeting-buttons/meeting-buttons.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SocialMediaIconsComponent } from '../shared/social-media-icons/social-m
     OptionCardComponent,
     ContactFormComponent,
     MapComponent,
+    MeetingButtonsComponent,
   ],
   imports: [
     CommonModule,

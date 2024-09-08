@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { TalkComponent } from './talk/talk.component';
+import { TawkService } from './tawk/tawk.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [AppComponent, TalkComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,7 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
     MatButtonModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), TawkService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -19,6 +19,7 @@ export class TechStackComponent {
     { proficiency: 60, name: "Microservices", imageUrl: 'https://media.licdn.com/dms/image/C5112AQEEcR2mak_D8Q/article-cover_image-shrink_720_1280/0/1563209644780?e=2147483647&v=beta&t=U76cYNVN1rJWoYx1fKFsMW9-3DbfyImlwWGFhLLc3qk' },
     { proficiency: 80, name: "E2E Testing", imageUrl: 'https://cdn-icons-png.flaticon.com/512/10435/10435145.png' },
     { proficiency: 90, name: "Graphql", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/1200px-GraphQL_Logo.svg.png' },
+    { proficiency: 50, name: "Serverless", imageUrl: 'https://getcommandeer.com/_nuxt/img/4a7600a.png' },
     { proficiency: 60, name: "Firebase", imageUrl: 'https://miro.medium.com/v2/resize:fit:300/1*R4c8lHBHuH5qyqOtZb3h-w.png' },
   ];
   
@@ -45,8 +46,8 @@ export class TechStackComponent {
     { proficiency: 80, name: "Docker", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009749/pebtirzmkqmputt8o0pf.png' },
     { proficiency: 80, name: "Git", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009750/dmcnjjohqxrujnm27gy1.png' },
     { proficiency: 70, name: "Gitlens", imageUrl: 'https://static-00.iconduck.com/assets.00/githubactions-icon-2048x2048-ipqow27x.png' },
-    { proficiency: 50, name: "Jenkins", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png' },
-    { proficiency: 50, name: "Ansible", imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-asible-logo-icon-download-in-svg-png-gif-file-formats--brand-pack-logos-icons-9631116.png' },
-    { proficiency: 60, name: "Linux", imageUrl: 'https://static-00.iconduck.com/assets.00/linux-icon-2048x2048-sy06t4un.png' },
+    { proficiency: 60, name: "Jenkins", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png' },
+    { proficiency: 70, name: "Ansible", imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-asible-logo-icon-download-in-svg-png-gif-file-formats--brand-pack-logos-icons-9631116.png' },
+    { proficiency: 50, name: "Linux", imageUrl: 'https://static-00.iconduck.com/assets.00/linux-icon-2048x2048-sy06t4un.png' },
   ]
 }

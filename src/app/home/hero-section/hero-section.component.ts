@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { OfferModalComponent } from '../../shared/offer-modal/offer-modal.component';
 import { MatDialog } from '@angular/material/dialog';
+import { OfferModalComponent } from '../../shared/offer-modal/offer-modal.component';
 
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
 })
 export class HeroSectionComponent {
-  constructor(public dialog: MatDialog) {}
+  meetingTitle: string = '';
+  guestEmail: string = '';
+  meetingDate: string = '';
+
+  constructor(public dialog: MatDialog) { }
 
   openOfferModal(): void {
     const dialogRef = this.dialog.open(OfferModalComponent, {
@@ -20,7 +24,7 @@ export class HeroSectionComponent {
     });
   }
 
-  scheduleMeeting() {
-    alert("I'm working on it")
+  redirectToCalender(): void {
+    window.open('https://calendar.google.com/calendar/u/0/r/eventedit?text=Project%20Kickoff&add=zeshanshakil0@gmail.com', '_blank');
   }
 }

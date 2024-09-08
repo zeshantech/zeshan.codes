@@ -1,19 +1,11 @@
 <app-hero-section></app-hero-section>
 
 <div class="container m-auto">
-  <mat-tab-group>
-    <mat-tab label="Mobile apps">
-      <div class="flex flex-wrap gap-12 justify-center my-12">
-        <app-card *ngFor="let app of mobileApps" [name]="app.name" [description]="app.description" [playStoreLink]="app.playStoreLink" [appStoreLink]="app.appStoreLink" [ratings]="app.ratings" [imageUrl]="app.imageUrl">
-        </app-card>
-      </div>
-    </mat-tab>
+  <div class="flex flex-wrap gap-12 justify-between my-12">
+    <app-card *ngFor="let app of mobileApps" [name]="app.name" [description]="app.description"
+      [playStoreLink]="app.playStoreLink" [webLink]="app.webLink" [appStoreLink]="app.appStoreLink" [ratings]="app.ratings"
+      [imageUrl]="app.imageUrl">
+    </app-card>
+  </div>
 
-    <mat-tab label="WebApps and Websites">
-      <div class="flex flex-wrap gap-12 justify-center my-12">
-        <app-card *ngFor="let app of websites" [name]="app.name" [description]="app.description" [imageUrl]="app.imageUrl" [webLink]="app.webLink">
-        </app-card>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
 </div>

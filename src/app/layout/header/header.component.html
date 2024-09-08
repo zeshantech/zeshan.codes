@@ -1,5 +1,5 @@
-<mat-toolbar class="flex justify-between z-20">
-  <span [routerLink]="['']" class="cursor-pointer">Zeshan codes</span>
+<mat-toolbar class="flex justify-between z-20" >
+  <h3 [routerLink]="['']" class="cursor-pointer mat-headline-5 !mb-0 uppercase">Zeshan <span class="mat-body-1  tracking-wide !font-semibold  text-[#009688]">codes</span></h3>
 
   <div class="gap-2 items-center hidden md:flex">
     <a mat-button routerLink="portfolio">Portfolio</a>
@@ -7,17 +7,14 @@
     <a mat-button routerLink="about">About</a>
     <a mat-button routerLink="contact">Contact</a>
   </div>
-
-  <mat-slide-toggle color="primary" (change)="toggleTheme()"
-    >Toggle theme</mat-slide-toggle
-  >
+  <div></div>
 </mat-toolbar>
 
 <div class="block md:hidden">
   <mat-toolbar color="primary" class="justify-center">
-    <a mat-button routerLink="portfolio">Portfolio</a>
-    <a mat-button routerLink="services">Services</a>
-    <a mat-button routerLink="about">About</a>
-    <a mat-button routerLink="contact">Contact</a>
+    <a mat-button  routerLink="portfolio">Portfolio</a>
+    <a mat-button  routerLink="services">Services</a>
+    <a mat-button  routerLink="about">About</a>
+    <a mat-button  routerLink="contact">Contact</a>
   </mat-toolbar>
 </div>
