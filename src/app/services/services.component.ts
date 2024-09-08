@@ -12,16 +12,31 @@ export class ServicesComponent {
       title: 'Web Development',
       description:
         'Crafting responsive and dynamic web applications using frontend frameworks and libraries. Ensuring seamless user experiences across different devices and browsers.',
-      technologies: ['React.js', 'Next.js', 'Angular'],
+      technologies: ['React.js', 'Next.js', 'Angular', 'JavaScript', 'TypeScript', 'HTML5'],
       imageUrl:
         'https://png.pngtree.com/png-clipart/20190903/original/pngtree-black-computer-icon-png-image_4421931.jpg',
     },
     {
       title: 'Backend Development',
       description:
-        'Architecting robust and scalable server-side solutions, implementing microservices architecture for improved performance and maintainability',
+        'Architecting robust and scalable server-side solutions, Security Strategies, implementing microservices architecture for improved performance, Security and maintainability',
       technologies: [
-        'Nestjs', 'Nodejs', 'GinGonic', ,'Golang', 'Expressjs', 'Moleculerjs', 'Microservices', 'E2E Testing', 'Graphql', 'Serverless', 'Firebase', 'Supabase', 'BaaS Services'
+        'Nestjs',
+        'Nodejs',
+        'GinGonic',
+        'Golang',
+        'Expressjs',
+        'Moleculerjs',
+        'Microservices',
+        'E2E Testing',
+        'Graphql',
+        'Security',
+        'Serverless',
+        'Firebase',
+        'Supabase',
+        'BaaS Services',
+        'Jest',
+        'Postman'
       ],
       imageUrl:
         'https://w7.pngwing.com/pngs/677/905/png-transparent-computer-icons-gear-circle-black-and-white-svg-hardware-accessory.png',
@@ -64,14 +79,6 @@ export class ServicesComponent {
       technologies: ['AWS', 'Jenkins', 'Ansible', 'Docker', 'Git', 'Gitlens', 'Linux', 'CICD Pipelines'],
       imageUrl:
         'https://static.thenounproject.com/png/2606577-200.png',
-    },
-    {
-      title: 'Quality Assurance (QA)',
-      description:
-        'Conducting thorough testing and quality assurance processes to ensure software reliability, performance, and security.',
-      technologies: ['Jest', 'E2E Testing', 'Postman'],
-      imageUrl:
-        'https://p7.hiclipart.com/preview/666/474/504/quality-assurance-quality-control-computer-icons-others.jpg',
     },
   ];
 }
