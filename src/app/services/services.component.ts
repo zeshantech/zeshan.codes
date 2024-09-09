@@ -62,7 +62,7 @@ export class ServicesComponent {
       description:
         'Developing native and cross-platform mobile applications for iOS and Android platforms, delivering seamless user experiences.',
       technologies: ['React Native', 'Ionic'],
-      imageUrl: 'https://cdn1.iconfinder.com/data/icons/soleicons-solid-vol-1/64/reactjs_javascript_library_atom_atomic_react-512.png',
+      imageUrl: 'https://img.freepik.com/premium-vector/smartphone-frame-border-black-silhouette-icon-transparent-screen-background-png_1105246-1212.jpg?semt=ais_hybrid',
     },
     {
       title: 'Desktop App Development',
