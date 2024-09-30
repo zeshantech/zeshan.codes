@@ -45,7 +45,7 @@ export class TechStackComponent {
     { proficiency: 30, name: "AWS", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009750/wm0h2lbbzxogenttx0tg.png' },
     { proficiency: 80, name: "Docker", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009749/pebtirzmkqmputt8o0pf.png' },
     { proficiency: 80, name: "Git", imageUrl: 'https://res.cloudinary.com/djvfnekle/image/upload/v1710009750/dmcnjjohqxrujnm27gy1.png' },
-    { proficiency: 70, name: "Gitlens", imageUrl: 'https://static-00.iconduck.com/assets.00/githubactions-icon-2048x2048-ipqow27x.png' },
+    { proficiency: 70, name: "Github Actions", imageUrl: 'https://static-00.iconduck.com/assets.00/githubactions-icon-2048x2048-ipqow27x.png' },
     { proficiency: 60, name: "Jenkins", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png' },
     { proficiency: 70, name: "Ansible", imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-asible-logo-icon-download-in-svg-png-gif-file-formats--brand-pack-logos-icons-9631116.png' },
     { proficiency: 50, name: "Linux", imageUrl: 'https://static-00.iconduck.com/assets.00/linux-icon-2048x2048-sy06t4un.png' },

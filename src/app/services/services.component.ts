@@ -76,7 +76,7 @@ export class ServicesComponent {
       title: 'DevOps Services',
       description:
         'Implementing CICD pipelines, ensuring efficient collaboration and streamlined development workflows',
-      technologies: ['AWS', 'Jenkins', 'Ansible', 'Docker', 'Git', 'Gitlens', 'Linux', 'CICD Pipelines'],
+      technologies: ['AWS', 'Jenkins', 'Ansible', 'Docker', 'Git', 'Github Actions', 'Linux', 'CICD Pipelines'],
       imageUrl:
         'https://static.thenounproject.com/png/2606577-200.png',
     },
