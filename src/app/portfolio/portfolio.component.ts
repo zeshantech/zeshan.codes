@@ -85,15 +85,7 @@ export class PortfolioComponent {
       ratings: 5.0,
       imageUrl:
         'https://mir-s3-cdn-cf.behance.net/project_modules/disp/e0939f4550228.5601edce119dc.jpg',
-    },
-    {
-      name: '4S (iot devices management)',
-      description:
-        'Things tracking WebApp by sensors developed in <br> <small>(Node.js · Next.js · MySQL · Amazon Web Services (AWS) · MQTT) <small>',
-      ratings: 5.0,
-      imageUrl:
-        'https://e0.pxfuel.com/wallpapers/251/936/desktop-wallpaper-iot-internet-of-things.jpg',
-    },
+    }
   ];
 
 }
